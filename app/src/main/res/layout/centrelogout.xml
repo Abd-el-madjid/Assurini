@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/whiteColor"
+    app:cardCornerRadius="15dp">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/choosetxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/log_out"
+            android:textColor="@color/blackTextColor"
+            android:layout_marginTop="5dp"
+            android:textSize="28dp"
+            android:textStyle="bold"/>
+
+        <TextView
+
+            android:layout_below="@id/choosetxt"
+            android:id="@+id/logouttext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/log_out_message"
+            android:textColor="@color/blackTextColor"
+            android:layout_marginTop="10dp"
+            android:padding="20dp"
+            android:textSize="18dp"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"/>
+
+        <!-- Validation Button -->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/logout"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logouttext"
+            android:layout_centerHorizontal="true"
+            android:text="@string/log_out_button"
+            android:paddingTop="15dp"
+            android:paddingRight="25dp"
+            android:paddingLeft="25dp"
+            android:paddingBottom="15dp"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/whiteTextColor"
+
+            android:background="@drawable/bg_start"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+
+</RelativeLayout>

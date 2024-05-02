@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Assurance.CompanyFragment"
+    android:background="@drawable/gradient_background"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shuffle_line" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shuffle_line" />
+    </LinearLayout>
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        android:background="@color/transparent"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="@color/transparent"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/discutionname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/Company"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightgreay" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_below="@id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:queryHint="find your inssurance agency entre name"
+        android:hint="find your inssurance agency entre name"
+        android:iconifiedByDefault="false"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/border_background"
+        android:queryBackground="@android:color/background_light"
+        />
+
+    <RelativeLayout
+        android:layout_below="@id/searchView"
+        android:layout_marginTop="10dp"
+        android:id="@+id/filtrage"
+        android:layout_alignParentEnd="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+        <ImageView
+            android:layout_marginStart="5dp"
+            android:id="@+id/filtreimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:padding="5dp"
+            android:src="@drawable/outline_filter_alt_24" />
+
+        <Spinner
+            android:layout_toRightOf="@id/filtreimage"
+            android:id="@+id/spinner_filtre"
+            style="@style/GenderSpinnerStyle"
+            android:layout_width="wrap_content"
+
+            android:background="@color/transparent"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Gender"
+            android:paddingLeft="10dp"
+            android:paddingTop="14dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="14dp"
+            android:spinnerMode="dropdown" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@id/filtrage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bar"
+            android:id="@+id/recycler_view_companys"/>
+
+    </ScrollView>
+
+</RelativeLayout>

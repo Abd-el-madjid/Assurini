@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#022B3A</color>
+    <color name="colorPrimaryLight">#5A6E6B</color>
+    <color name="lightMain">#A8DADC</color>
+    <color name="lightMain2">#4D8F91</color>
+
+    <color name="secondaryDark">#E6CCB2</color>
+    <color name="secondary">#EDE0D4</color>
+    <color name="secondaryLight">#F6EBE1</color>
+
+    <color name="transparent">#00FAFAFA</color>
+
+
+    <color name="darkgrey">#343435</color>
+    <color name="middlegrey">#202D3535</color>
+    <color name="lightgreay">#20BEBEBE</color>
+
+    <color name="StrokColor">#1F7A8C</color>
+
+    <color name="colorgreen">#2FFB00</color>
+    <color name="colorred">#FB0800</color>
+
+    <!--colors for modern ui fixe-->
+
+    <color name="primaryTextColor">#022B3A</color>
+
+    <color name="whiteTextColor">#FBFBFB</color>
+    <color name="blackTextColor">#1C1C1C</color>
+    <color name="whiteColor">#FBFBFB</color>
+    <color name="blackColor">#1C1C1C</color>
+
+</resources>

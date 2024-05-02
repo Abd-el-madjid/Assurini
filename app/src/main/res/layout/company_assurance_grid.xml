@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/transparent"
+
+    >
+
+    <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="15dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/whiteColor"
+        android:id="@+id/linear_layout"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+android:padding="5dp"
+            android:id="@+id/question_layout"
+            android:layout_width="140dp"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true"
+                android:padding="16sp"
+                android:src="@drawable/red_circle" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

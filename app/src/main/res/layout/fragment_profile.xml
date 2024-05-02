@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile.ProfileFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shuffle_line" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shuffle_line" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        style="@style/parent">
+        <!-- Top Half -->
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/notification"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/logoImage"
+                        android:layout_width="72dp"
+                        android:layout_height="76dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerHorizontal="true"
+
+                        android:src="@drawable/profile" />
+
+
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/fullname"
+                    android:layout_below="@id/notification"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="Kahoul Abd El Madjid"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <!-- Bottom Half -->
+        <RelativeLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="564dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/form_bg"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <RelativeLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp">
+                <!-- Text View Layout -->
+                <RelativeLayout
+                    android:id="@+id/firstLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/lets_find_out"
+                        android:textColor="@color/secondary"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+                <!-- Form Layout -->
+                <RelativeLayout
+                    android:id="@+id/formLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/firstLayout">
+
+
+                    <RelativeLayout
+                        android:id="@+id/Accountpanel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/titleTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="@string/hint_account"
+
+                            android:textColor="@color/secondary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+
+                            android:id="@+id/personnelLayout"
+                            style="@style/Themeditem0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/titleTextView">
+
+                            <!-- User Icon -->
+                            <ImageView
+                                android:id="@+id/UserIcon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginStart="5dp"
+                                android:padding="8dp"
+                                android:src="@drawable/outline_person_24" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_toRightOf="@id/UserIcon"
+                                android:text="@string/hint_personal_information"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp" />
+                            <!-- Right Arrow Icon -->
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_alignParentRight="true"
+                                android:contentDescription="Right Arrow Icon"
+
+                                android:padding="10dp"
+                                android:src="@drawable/baseline_keyboard_arrow_right_24" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+
+                            android:id="@+id/passwordLayout"
+                            style="@style/Themeditem0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/personnelLayout">
+
+                            <!-- User Icon -->
+                            <ImageView
+                                android:id="@+id/passowrdIcon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginStart="5dp"
+                                android:padding="8dp"
+                                android:src="@drawable/outline_password_24" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_toRightOf="@id/passowrdIcon"
+                                android:text="@string/hint_password_manage"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp" />
+                            <!-- Right Arrow Icon -->
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_alignParentRight="true"
+                                android:contentDescription="Right Arrow Icon"
+
+                                android:padding="10dp"
+                                android:src="@drawable/baseline_keyboard_arrow_right_24" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/Tipspanel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Accountpanel"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/Tips"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="@string/hint_tips"
+                            android:textColor="@color/secondary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/SupportLayout"
+                            style="@style/Themeditem0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Tips">
+
+                            <!-- User Icon -->
+                            <ImageView
+                                android:id="@+id/Supporticon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginStart="5dp"
+                                android:contentDescription="User Icon"
+                                android:padding="8dp"
+                                android:src="@drawable/outline_shield_24" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_toRightOf="@id/Supporticon"
+                                android:text="@string/hint_support_client"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp" />
+                            <!-- Right Arrow Icon -->
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_alignParentRight="true"
+                                android:contentDescription="Right Arrow Icon"
+
+                                android:padding="8dp"
+                                android:src="@drawable/baseline_keyboard_arrow_right_24" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/Additionalpanel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Tipspanel"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/Addition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="@string/hint_additional"
+                            android:textColor="@color/secondary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/languageLayout"
+                            style="@style/Themeditem0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Addition">
+
+                            <!-- User Icon -->
+                            <ImageView
+                                android:id="@+id/languageicon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginStart="5dp"
+                                android:contentDescription="User Icon"
+                                android:padding="8dp"
+                                android:src="@drawable/outline_language_24" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_toRightOf="@id/languageicon"
+                                android:text="@string/hint_language"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp" />
+                            <!-- Right Arrow Icon -->
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_alignParentRight="true"
+                                android:contentDescription="Right Arrow Icon"
+
+                                android:padding="8dp"
+                                android:src="@drawable/baseline_keyboard_arrow_right_24" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/modeLayout"
+                            style="@style/Themeditem0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/languageLayout">
+
+                            <!-- User Icon -->
+                            <ImageView
+                                android:id="@+id/modeicon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginStart="5dp"
+                                android:contentDescription="User Icon"
+                                android:padding="8dp"
+                                android:src="@drawable/outline_dark_mode_24" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_toRightOf="@id/modeicon"
+                                android:text="@string/hint_mode_manager"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp" />
+                            <!-- Right Arrow Icon -->
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_alignParentRight="true"
+                                android:contentDescription="Right Arrow Icon"
+
+                                android:padding="8dp"
+                                android:src="@drawable/baseline_keyboard_arrow_right_24" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/logoutLayout"
+
+                            style="@style/Themeditem0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/modeLayout">
+
+                            <!-- User Icon -->
+                            <ImageView
+                                android:id="@+id/logouticon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginStart="5dp"
+                                android:contentDescription="log out"
+                                android:padding="8dp"
+                                android:src="@drawable/outline_logout_24" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_toRightOf="@id/logouticon"
+                                android:text="@string/hint_log_out"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp" />
+                            <!-- Right Arrow Icon -->
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_alignParentRight="true"
+                                android:contentDescription="Right Arrow Icon"
+
+                                android:padding="8dp"
+                                android:src="@drawable/baseline_keyboard_arrow_right_24" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

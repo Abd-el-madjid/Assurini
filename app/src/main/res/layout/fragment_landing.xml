@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard.LandingFragment"
+    android:background="@drawable/gradient_background"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shuffle_line" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shuffle_line" />
+    </LinearLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:textColor="@color/blackTextColor"
+                    android:textStyle="bold"
+                    android:id="@+id/firstLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="start"
+                    android:text="@string/hint_welcome"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:layout_alignBaseline="@id/firstLine"
+                    android:textStyle="bold"
+android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:id="@+id/fullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/firstLine"
+                    android:layout_toRightOf="@id/firstLine"
+                    android:layout_marginStart="8dp"
+                    android:gravity="start"
+                    android:text="Username Hint"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:textColor="@color/blackTextColor"
+                    android:id="@+id/secondLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/firstLine"
+                    android:layout_alignParentLeft="true"
+                    android:ellipsize="marquee"
+                    android:maxLines="1"
+                    android:gravity="start"
+                    android:textStyle="bold"
+                    android:text="@string/hint_lets_find_best"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:background="@drawable/bg_botification"
+                android:id="@+id/notification"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+
+                    android:layout_centerInParent="true"
+
+                    android:src="@drawable/outline_notifications_24" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:visibility="visible"
+                    android:id="@+id/notificationNumber"
+                    android:text="13"
+                    android:textAlignment="center"
+                    android:paddingVertical="1dp"
+                    android:textColor="@color/whiteTextColor"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="-20dp"
+                    android:background="@drawable/red_circle" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/start_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/toolbar"
+        android:padding="15dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:background="@drawable/bg_start">
+
+            <RelativeLayout
+                android:id="@+id/starttext"
+                android:layout_width="220dp"
+
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textview1"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Insurance_Made_Easy"
+                    android:textColor="@color/secondary"
+                    android:textSize="18dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textview2"
+
+                    android:layout_width="202dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview1"
+                    android:text="@string/easiest_Insurance"
+                    android:textColor="@color/secondary"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/textview3"
+                    android:layout_marginTop="10dp"
+
+                    style="@style/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textview2"
+                    android:text="@string/Get_Quote"
+                    android:textAllCaps="false"
+                    android:textColor="@color/secondary"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+android:padding="5dp"
+                android:id="@+id/startiamge"
+                android:layout_width="165dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="220dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/startimage" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/start_layout"
+        android:padding="15dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_types"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/types_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textview23"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Leave_us"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/seeallType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="0.2"
+                    android:gravity="end"
+                    android:text="@string/seeall"
+                    android:textStyle="bold"
+                    android:textColor="@color/lightMain"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/types_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/types_title"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                >
+
+                <GridView
+                    android:id="@+id/types_body_left"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:columnCount="2"
+                    android:alignmentMode="alignMargins"/>
+
+                <GridView
+
+                    android:id="@+id/types_body_right"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:columnCount="2"
+                    android:alignmentMode="alignMargins"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@id/layout_types"
+            android:id="@+id/layout_companies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/companies_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textview232"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Top_Companies"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/seeallcomapnies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="0.2"
+                    android:gravity="end"
+                    android:text="@string/seeall"
+                    android:textStyle="bold"
+
+                    android:textColor="@color/lightMain"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/companies_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/companies_title"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp">
+
+                <GridView
+                    android:id="@+id/companies_body_left"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:columnCount="2"
+                    android:alignmentMode="alignMargins"/>
+
+                <GridView
+                    android:id="@+id/companies_body_right"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:columnCount="2"
+                    android:alignmentMode="alignMargins"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

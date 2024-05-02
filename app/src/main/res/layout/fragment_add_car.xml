@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Assurance.AddCarFragment"
+    android:background="@color/colorPrimary"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shuffle_line" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shuffle_line" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
+
+        <!-- Text View Layout -->
+        <RelativeLayout
+            android:id="@+id/firstLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingTop="5dp"
+            android:paddingRight="16dp"
+            android:layout_marginBottom="10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/newcar"
+                android:textColor="@color/secondary"
+                android:textSize="26dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <!-- Step Indicator -->
+        <com.baoyachi.stepview.HorizontalStepView
+            android:layout_below="@id/firstLayout"
+            android:id="@+id/step_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true" />
+        <!-- Form Layout -->
+        <RelativeLayout
+            android:id="@+id/formLayout"
+            android:layout_below="@id/step_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:paddingRight="16dp">
+
+            <!-- Step 1 Layout -->
+            <RelativeLayout
+                android:id="@+id/step1Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Step 1 Fields -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/carteGriseNumber_layout"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/carteGriseNumber"
+                        style="@style/modifiedEditText"
+                        android:hint="Carte Grise number"
+                        android:inputType="number"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/registrationNumber_layout"
+                    style="@style/parent"
+                    android:layout_below="@id/carteGriseNumber_layout"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/registrationNumber"
+                        style="@style/modifiedEditText"
+                        android:hint="Registration number"
+                        android:inputType="number"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/previousRegistrationNumber_layout"
+                    style="@style/parent"
+                    android:layout_below="@id/registrationNumber_layout"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/previousRegistrationNumber"
+                        style="@style/modifiedEditText"
+                        android:hint="Previous registration number"
+                        android:inputType="number"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/yearOfCirculation_layout"
+                    style="@style/parent"
+                    android:layout_below="@id/previousRegistrationNumber_layout"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/yearOfCirculation"
+                        style="@style/modifiedEditText"
+                        android:hint="Year of circulation"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/typeSeriesNumber_layout"
+                    style="@style/parent"
+                    android:layout_below="@id/yearOfCirculation_layout"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/typeSeriesNumber"
+                        style="@style/modifiedEditText"
+                        android:hint="Number in the type series"
+                        android:inputType="text"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <!-- Step 2 Layout -->
+            <RelativeLayout
+                android:id="@+id/step2Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <!-- Step 2 Fields -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/wilaya_layout"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/wilaya"
+                        style="@style/modifiedEditText"
+                        android:hint="Wilaya"
+                        android:inputType="text"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/commune_layout"
+                    style="@style/parent"
+                    android:layout_below="@id/wilaya_layout"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/commune"
+                        style="@style/modifiedEditText"
+                        android:hint="Commune"
+                        android:inputType="text"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/carType_layout"
+                    style="@style/parent"
+                    android:layout_below="@id/commune_layout"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/carType"
+                        style="@style/modifiedEditText"
+                        android:hint="Car Type"
+                        android:inputType="text"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/carModel_layout"
+                    style="@style/parent"
+                    android:layout_below="@id/carType_layout"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/carModel"
+                        style="@style/modifiedEditText"
+                        android:hint="Car model"
+                        android:inputType="text"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/gender_layout"
+                    style="@style/parent"
+                    android:layout_below="@id/carModel_layout"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/gender"
+                        style="@style/modifiedEditText"
+                        android:hint="Gender"
+                        android:inputType="text"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <!-- Step 3 Layout -->
+            <RelativeLayout
+                android:id="@+id/step3Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <!-- Step 3 Fields -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/payload_layout"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/payload"
+                        style="@style/modifiedEditText"
+                        android:hint="Payload"
+                        android:inputType="number"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/grossWeight_layout"
+                    style="@style/parent"
+                    android:layout_below="@id/payload_layout"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/grossWeight"
+                        style="@style/modifiedEditText"
+                        android:hint="Gross weight"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/horsePower_layout"
+                    style="@style/parent"
+                    android:layout_below="@id/grossWeight_layout"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/horsePower"
+                        style="@style/modifiedEditText"
+                        android:hint="Horse power"
+                        android:inputType="number"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/body_layout"
+                    style="@style/parent"
+                    android:layout_below="@id/horsePower_layout"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/body"
+                        style="@style/modifiedEditText"
+                        android:hint="Body"
+                        android:inputType="text"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fuelType_layout"
+                    style="@style/parent"
+                    android:layout_below="@id/body_layout"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fuelType"
+                        style="@style/modifiedEditText"
+                        android:hint="Fuel type"
+                        android:inputType="text"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@id/formLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:paddingRight="16dp">
+            <!-- Next and Previous Buttons -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:visibility="gone"
+                android:id="@+id/prevButton"
+                style="@style/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Previous"
+                android:layout_alignParentStart="true"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nextButton"
+                style="@style/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Next"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Authentification.SignUp"
+
+    android:background="@color/secondary" >
+
+
+
+    <RelativeLayout
+        style="@style/parent">
+        <!-- Top Half -->
+        <RelativeLayout
+            android:background="@drawable/shuffle_line"
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="223dp"
+            android:layout_alignParentTop="true"
+
+            android:orientation="horizontal"
+            android:paddingTop="20px">
+
+            <!-- Arrow Layout -->
+            <RelativeLayout
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="0dp"
+                android:layout_toStartOf="@+id/logo"
+                android:paddingStart="20px"
+                android:paddingTop="82px"
+
+                android:paddingEnd="20px">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/arrowImage"
+                    android:layout_width="56dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/arrow" />
+
+            </RelativeLayout>
+
+            <!-- Logo Layout -->
+            <RelativeLayout
+                android:id="@+id/logo"
+                android:layout_width="320dp"
+                android:layout_height="match_parent"
+
+                android:layout_alignParentEnd="true"
+                android:paddingStart="60px"
+                android:paddingEnd="60px">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/logoImage"
+                    android:layout_width="172dp"
+                    android:layout_height="146dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="130dp"
+                    android:src="@drawable/blue_final_logo" />
+
+                <!-- Name Layout -->
+                <RelativeLayout
+
+                    android:id="@+id/name"
+                    android:layout_width="166dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/logoImage"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="125dp"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="A"
+                            android:textAllCaps="true"
+                            android:textColor="@color/whiteTextColor"
+                            android:textSize="28dp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="SS"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="28dp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="urini"
+                            android:textAllCaps="true"
+                            android:textColor="@color/whiteTextColor"
+                            android:textSize="28dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!-- Bottom Half -->
+        <RelativeLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="630dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/form_bg"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:paddingLeft="50dp"
+            android:paddingTop="5dp"
+            android:paddingRight="50dp">
+
+            <RelativeLayout
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <!-- Text View Layout -->
+                <RelativeLayout
+                    android:id="@+id/firstLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="16dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/start"
+                        android:textColor="@color/secondary"
+                        android:textSize="24dp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+                <!-- Form Layout -->
+                <RelativeLayout
+                    android:id="@+id/formLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/firstLayout"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="0dp"
+                    android:paddingRight="16dp">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/fullname_layout"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fullname"
+                            style="@style/modifiedEditText"
+                            android:hint="@string/fullName"
+                            android:inputType="text"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/number_layout"
+                        style="@style/parent"
+                        android:layout_below="@id/fullname_layout"
+                        android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/nationalnumber"
+                            style="@style/modifiedEditText"
+                            android:hint="@string/national_number_hint"
+                            android:inputType="number"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/dateEditText_layout"
+                        style="@style/parent"
+                        android:layout_below="@id/number_layout"
+                        android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                        <EditText
+                            android:id="@+id/dateEditText"
+                            style="@style/modifiedEditText"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:hint="@string/date_of_birth_hint"
+                            android:inputType="none"
+                            android:maxLines="1"
+                            android:onClick="showDatePickerDialog" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/placeofbirth_layout"
+                        style="@style/parent"
+                        android:layout_below="@id/dateEditText_layout"
+                        android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/placeofbirth"
+                            style="@style/modifiedEditText"
+                            android:hint="@string/place_of_birth_hint"
+                            android:inputType="text"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+///////////
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/phone_layout"
+                        style="@style/parent"
+                        android:layout_below="@id/placeofbirth_layout"
+                        android:layout_marginTop="@dimen/signup_text_margin_top">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/modifiedEditText"
+                            android:id="@+id/numTelephone"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:hint="@string/telephone_number_hint" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputEmail"
+                        style="@style/parent"
+
+                        android:layout_below="@id/phone_layout"
+                        android:layout_marginTop="@dimen/signup_text_margin_top">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextEmail"
+                            style="@style/modifiedEditText"
+                            android:hint="@string/login_email_hint"
+
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputPassword"
+                        style="@style/parent"
+
+                        android:layout_below="@id/textInputEmail"
+                        android:layout_marginTop="@dimen/signup_text_margin_top">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextPassword"
+                            style="@style/modifiedEditText"
+                            android:hint="@string/login_password_hint"
+                            android:inputType="textPassword"
+                            android:maxLines="1" />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/eye_Password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="-45dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/transparent"
+                            android:contentDescription="Toggle Old Password Visibility"
+                            android:padding="15dp"
+                            android:src="@drawable/eye_closed" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/SignUpButton"
+
+
+                        style="@style/button3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textInputPassword"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/login" />
+
+                    <!-- Your form elements here -->
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/signupLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/formLayout"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="26dp"
+                    android:paddingRight="26dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/Already_with_Us"
+                        android:textColor="@color/secondary"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/loginTextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="25px"
+                        android:layout_toRightOf="@id/textView3"
+                        android:text="@string/login"
+                        android:textColor="@color/secondaryDark"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
